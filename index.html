@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 2</title>
-</head>
-<body>
+    <title>TechWave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-</body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .text-gradient {
+            background: linear-gradient(90deg, #ff5e9c 0%, #b84bf7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-gradient {
+            background: linear-gradient(90deg, #ffcb52 0%, #ff7b02 30%, #e600fa 100%);
+        }
+        .badge-glow {
+            color: #130623;
+            box-shadow: 0 0 15px rgba(0, 217, 95, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-[#130623] overflow-x-hidden">
+
+    <header class="w-full fixed top-0 z-50">
+        <nav class="w-full bg-[#130623]/90 backdrop-blur-sm border-b border-white/5 transition-all duration-300 hover:bg-[#1c0933] hover:shadow-[0_4px_30px_rgba(184,75,247,0.15)]">
+            
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-20">
+                    
+                    <div class="flex-1 flex justify-start">
+                        <a href="#" class="text-3xl font-bold tracking-tight">
+                            <span class="text-white">Tech</span><span class="text-gradient">Wave</span>
+                        </a>
+                    </div>
+
+                    <div class="hidden md:flex flex-1 justify-center space-x-10 items-center">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">About</a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Episodes</a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Host</a>
+                    </div>
+
+                    <div class="hidden md:flex flex-1 justify-end">
+                        <button class="group btn-gradient text-white px-6 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2 transition-transform hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(230,0,250,0.3)]">
+                            Subscribe
+                            <img src="./assets/ArrowRight.png" alt="arrow" class="w-4 h-4 object-contain transition-transform group-hover:translate-x-1 invert brightness-0">
+                        </button>
+                    </div>
+
+                    <div class="flex md:hidden flex-1 justify-end">
+                        <label for="menu-toggle" class="text-gray-300 hover:text-white cursor-pointer p-2">
+                            <img src="./assets/hamburger-menu.png" alt="menu" class="h-8 w-8 object-contain">
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="hidden peer-checked:block md:hidden bg-[#130623] border-t border-white/5 absolute w-full left-0 top-20 shadow-xl transition-all">
+                <div class="px-4 pt-4 pb-6 space-y-4 flex flex-col items-center">
+                    <a href="#" class="block text-gray-300 hover:text-white text-base font-medium">About</a>
+                    <a href="#" class="block text-gray-300 hover:text-white text-base font-medium">Episodes</a>
+                    <a href="#" class="block text-gray-300 hover:text-white text-base font-medium">Host</a>
+                    
+                    <button class="w-full mt-4 btn-gradient text-white px-6 py-3 rounded-full font-semibold text-sm flex justify-center items-center gap-2">
+                        Subscribe
+                        <img src="./assets/ArrowRight.png" alt="arrow" class="w-4 h-4 object-contain invert brightness-0">
+                    </button>
+                </div>
+            </div>
+
+        </nav>
+    </header> 
+    </body>
 </html>
